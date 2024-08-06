@@ -1,0 +1,18 @@
+What is JIT?
+     The Just-In-Time (JIT) compiler is a critical component of the Java Virtual Machine (JVM) 
+designed to improve the performance of Java applications by dynamically converting Java bytecode 
+into native machine code at runtime.
+
+What about classLoader?
+      A class loader in Java is a part of the Java Runtime Environment (JRE) responsible for 
+dynamically loading classes into the Java Virtual Machine (JVM) at runtime.
+Class loaders ensure that classes are loaded into memory only when needed, enabling features like 
+dynamic loading, unloading, and secure execution of Java programs.
+
+when is object create and allocate ?
+   Objects are created and allocated at runtime, not compile time.
+When you declare a reference variable, such as Person person;
+no memory is allocated for the object itself, only for the reference.
+Memory for the object is allocated when you use the new keyword to create an instance of a class.
+
+

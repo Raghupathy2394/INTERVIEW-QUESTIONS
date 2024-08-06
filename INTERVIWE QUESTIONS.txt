@@ -49,5 +49,35 @@ When you declare a reference variable, such as Person person;
 no memory is allocated for the object itself, only for the reference.
 Memory for the object is allocated when you use the new keyword to create an instance of a class.
 
+1.) What is Collections?
+	In Java, a collection is an object that groups multiple elements into a single unit. 
+	Collections are used to store, retrieve, manipulate, and communicate aggregate data. 
+	They provide a convenient way to work with groups of related objects.
+	The Java Collections Framework provides a set of interfaces and classes to handle different types of collections. 
+2.) What is the advantages of collections :
+	To overcome the drawbacks of arrays.
+	Increase performance by providing dynamic memory, linked list, treeset...
+	Type Safety with Generics, avoid runtime errors using class cast exception
+	Increased Code Reusability
+	Iterator, for each loop
+3.) What is ArrayList?
+	An ArrayList in Java is a resizable array implementation of the List interface. 
+	It is part of the Java Collections Framework and provides a way to store and manipulate a dynamic array of elements. 
+	Unlike standard arrays, ArrayList can grow and shrink in size automatically as elements are added or removed. 
+	Key features : Dynamic size, Indexed access, Orderd collection, Allow duplicate
+4.) What is Iterator?
+	An Iterator in Java is an object that enables you to traverse a collection, typically one element at a time.
+	It is a part of the Java Collections Framework and provides a standardized way to access elements in a collection sequentially without exposing the underlying structure.
+	Common methods : hasNext(), next(), remove().
+	Key features : Forward direction, Universal.
+5.) Difference between Collection and Collections.
+Collection :
+	A root interface in the Java Collections Framework.
+	Represents a group of objects.
+	Provides methods to operate on elements within the collection.
+Collections :
+	A utility class with static methods.
+	Provides algorithms to operate on collections.
+	Contains methods for sorting, searching, and modifying collections.
 
 

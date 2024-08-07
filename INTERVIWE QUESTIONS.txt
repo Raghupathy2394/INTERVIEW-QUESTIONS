@@ -79,5 +79,33 @@ Collections :
 	A utility class with static methods.
 	Provides algorithms to operate on collections.
 	Contains methods for sorting, searching, and modifying collections.
+14. What is Loosely coupling and Tightly coupling ?
+   i) Loosely coupling - Loosely coupled systems have components that are minimally dependent on each other. Changes in one component have little or no impact on others. 
+
+interface MessageService {
+    void sendMessage(String message, String receiver);
+}
+class EmailService implements MessageService {
+    public void sendMessage(String message, String receiver) {
+        System.out.println("Email sent to " + receiver + " with Message=" + message);
+    }
+}
+
+  ii) Tightly Coupling - Tightly coupled systems have components that are highly dependent on one another. A change in one module will likely result in changes in the other.
+
+   class EmailService {
+    public void sendEmail(String message, String receiver) {
+        System.out.println("Email sent to " + receiver + " with Message=" + message);
+    }
+}
+	
+class MyApplication {
+    private EmailService emailService = new EmailService();
+
+    public void processMessages(String message, String receiver) {
+        emailService.sendEmail(message, receiver);
+    }
+}
+
 
 

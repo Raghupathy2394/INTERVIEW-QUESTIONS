@@ -32,45 +32,45 @@ Garbage collection in Java is a process that automatically manages memory. When 
 In the Java Virtual Machine (JVM), memory is allocated into several distinct areas, each serving a specific purpose to optimize performance and manage resources efficiently. The primary types of memory allocation in the JVM include heap memory, stack memory, and metaspace. Heap memory is used for dynamic allocation of Java objects and is divided into the Young Generation and the Old Generation. The Young Generation handles new objects and is further split into the Eden Space and Survivor Spaces, while the Old Generation stores long-lived objects. Stack memory is dedicated to each thread and manages method call frames, local variables, and method results. Metaspace, introduced in Java 8, replaces the older Permanent Generation and is used for class metadata and method information, dynamically adjusting in size based on the application's needs. These distinct memory regions work together to ensure efficient execution and management of Java applications, providing both developers and the JVM with a structured approach to handling memory.
 
 
-What is JIT?
+5.What is JIT?
      The Just-In-Time (JIT) compiler is a critical component of the Java Virtual Machine (JVM) 
 designed to improve the performance of Java applications by dynamically converting Java bytecode 
 into native machine code at runtime.
 
-What about classLoader?
+6.What about classLoader?
       A class loader in Java is a part of the Java Runtime Environment (JRE) responsible for 
 dynamically loading classes into the Java Virtual Machine (JVM) at runtime.
 Class loaders ensure that classes are loaded into memory only when needed, enabling features like 
 dynamic loading, unloading, and secure execution of Java programs.
 
-when is object create and allocate ?
+7.when is object create and allocate ?
    Objects are created and allocated at runtime, not compile time.
-When you declare a reference variable, such as Person person;
+8.When you declare a reference variable, such as Person person;
 no memory is allocated for the object itself, only for the reference.
 Memory for the object is allocated when you use the new keyword to create an instance of a class.
 
-1.) What is Collections?
+9.) What is Collections?
 	In Java, a collection is an object that groups multiple elements into a single unit. 
 	Collections are used to store, retrieve, manipulate, and communicate aggregate data. 
 	They provide a convenient way to work with groups of related objects.
 	The Java Collections Framework provides a set of interfaces and classes to handle different types of collections. 
-2.) What is the advantages of collections :
+10.) What is the advantages of collections :
 	To overcome the drawbacks of arrays.
 	Increase performance by providing dynamic memory, linked list, treeset...
 	Type Safety with Generics, avoid runtime errors using class cast exception
 	Increased Code Reusability
 	Iterator, for each loop
-3.) What is ArrayList?
+11.) What is ArrayList?
 	An ArrayList in Java is a resizable array implementation of the List interface. 
 	It is part of the Java Collections Framework and provides a way to store and manipulate a dynamic array of elements. 
 	Unlike standard arrays, ArrayList can grow and shrink in size automatically as elements are added or removed. 
 	Key features : Dynamic size, Indexed access, Orderd collection, Allow duplicate
-4.) What is Iterator?
+12.) What is Iterator?
 	An Iterator in Java is an object that enables you to traverse a collection, typically one element at a time.
 	It is a part of the Java Collections Framework and provides a standardized way to access elements in a collection sequentially without exposing the underlying structure.
 	Common methods : hasNext(), next(), remove().
 	Key features : Forward direction, Universal.
-5.) Difference between Collection and Collections.
+13.) Difference between Collection and Collections.
 Collection :
 	A root interface in the Java Collections Framework.
 	Represents a group of objects.

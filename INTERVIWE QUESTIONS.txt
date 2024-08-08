@@ -174,5 +174,15 @@ ________________________________________________________________________________
 Access			  |	ArrayList is faster in storing and accessing data.		  |	LinkedList is faster in 														manipulation of data.
 
 -----------------------------------------------------------------------------------------------------------------------------
-
+19.What is Encapsulation ?
+⦁	The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.
+⦁	Declare class variables ,attributes as private.Provide public GET and SET methods to access & update the value of private variable.
+⦁	The private variables can only be accessed with in the same class.
+⦁	GET methods returns the variable value. SET method takes a parameter .Here THIS  keyword is used to refer to the current object.
+⦁	GET SET followed by the name of the variable with the first letter in uppercase.
+⦁	Variable declare private  cannot access it from outside this class.
+Why encapsulation ?
+⦁	Better control of class attributes & methods.
+⦁	class attributes can be made read only- if if we onlly used the GET method..Write only -if u only use the SET method
+⦁	Increased security of data.
 

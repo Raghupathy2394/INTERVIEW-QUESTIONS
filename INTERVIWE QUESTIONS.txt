@@ -13,6 +13,7 @@ JDK: For developing Java applications.
 JRE: For running Java applications.
 JVM: For executing Java bytecode.
 
+-------------------------------------------------------------------------------------------------------------------------
 2.What is the Difference between the == operator and equal method?
 == operator :
 The == operator is used to compare the memory addresses (references) of two objects to check if they point to the same location in memory.
@@ -25,13 +26,15 @@ The equals() method is defined in the Object class and is meant to compare the a
 Usage :
 Override: Many classes, especially in the Java standard library (like String, Integer, etc.), override the equals() method to provide a meaningful comparison based on the object's state rather than its memory address.
 
+-----------------------------------------------------------------------------------------------------------------------------
 3. What is the Garbage collection in Java?
 Garbage collection in Java is a process that automatically manages memory. When you create objects in your Java program, they use memory. Once those objects are no longer needed, the garbage collector comes in to clean up and free that memory, making it available for new objects. This helps prevent memory problems like memory leaks, which can slow down or crash your program. The garbage collector runs in the background and periodically checks which objects are no longer being used. It then removes those objects to free up memory. This automatic memory management makes it easier for developers to write efficient Java programs without worrying about manually releasing memory.
 
+-----------------------------------------------------------------------------------------------------------------------------
 4.What is The different Type of memory in allocation in JVM?
 In the Java Virtual Machine (JVM), memory is allocated into several distinct areas, each serving a specific purpose to optimize performance and manage resources efficiently. The primary types of memory allocation in the JVM include heap memory, stack memory, and metaspace. Heap memory is used for dynamic allocation of Java objects and is divided into the Young Generation and the Old Generation. The Young Generation handles new objects and is further split into the Eden Space and Survivor Spaces, while the Old Generation stores long-lived objects. Stack memory is dedicated to each thread and manages method call frames, local variables, and method results. Metaspace, introduced in Java 8, replaces the older Permanent Generation and is used for class metadata and method information, dynamically adjusting in size based on the application's needs. These distinct memory regions work together to ensure efficient execution and management of Java applications, providing both developers and the JVM with a structured approach to handling memory.
 
-
+-----------------------------------------------------------------------------------------------------------------------------
 What is JIT?
      The Just-In-Time (JIT) compiler is a critical component of the Java Virtual Machine (JVM) 
 designed to improve the performance of Java applications by dynamically converting Java bytecode 
@@ -48,6 +51,17 @@ when is object create and allocate ?
 When you declare a reference variable, such as Person person;
 no memory is allocated for the object itself, only for the reference.
 Memory for the object is allocated when you use the new keyword to create an instance of a class.
+--------------------------------------------------------------------------------------------------------------------------
+What is the difference between the string, string buffer , String Builder?
+String :
+string is basically an object that represents sequence of char values.  Strings are immutable. Once a String object is created, it cannot be changed. Any modification to a String results in the creation of a new String object.
+Since String is immutable, it is inherently thread-safe. Multiple threads can safely access a single String instance concurrently.
 
+StringBuilder :
+objects are mutable. You can modify the content of a StringBuffer object without creating new objects.
+A mutable sequence of characters. This class provides an API compatible with StringBuffer, but with no guarantee of synchronization. use multithread Environments 
+
+StringBuffer :
+A thread-safe, mutable sequence of characters.A string buffer is like a String, but can be modified.StringBuilder is faster than StringBuffer due to the lack of synchronization, making it the preferred choice for single-threaded scenarios or when thread safety is managed externally.
 
 

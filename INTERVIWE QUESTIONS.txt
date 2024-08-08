@@ -147,12 +147,7 @@ StringBuffer :
 A thread-safe, mutable sequence of characters.A string buffer is like a String, but can be modified.StringBuilder is faster than StringBuffer due to the lack of synchronization, making it the preferred choice for single-threaded scenarios or when thread safety is managed externally.
 
 -----------------------------------------------------------------------------------------------------------------------------
-17.) Difference between ArrayList and Linked List.
-
-
-
------------------------------------------------------------------------------------------------------------------------------
-18. Exception :
+17) Exception :
                    In Java, an exception is an event that disrupts the normal flow of the program. It is an object that the Java runtime system generates when 
                    an error occurs. Exceptions can be caught and handled to prevent the program from crashing. They are categorized into:
    Types of exception:
@@ -165,7 +160,7 @@ A thread-safe, mutable sequence of characters.A string buffer is like a String, 
                      3)Errors:
                                   These are serious problems that applications should not try to handle.
                                     Example: OutOfMemoryError. 
-
+-----------------------------------------------------------------------------------------------------------------------------
 
 
 

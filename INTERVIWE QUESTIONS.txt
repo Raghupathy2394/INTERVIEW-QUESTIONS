@@ -34,25 +34,106 @@ Garbage collection in Java is a process that automatically manages memory. When 
 4.What is The different Type of memory in allocation in JVM?
 In the Java Virtual Machine (JVM), memory is allocated into several distinct areas, each serving a specific purpose to optimize performance and manage resources efficiently. The primary types of memory allocation in the JVM include heap memory, stack memory, and metaspace. Heap memory is used for dynamic allocation of Java objects and is divided into the Young Generation and the Old Generation. The Young Generation handles new objects and is further split into the Eden Space and Survivor Spaces, while the Old Generation stores long-lived objects. Stack memory is dedicated to each thread and manages method call frames, local variables, and method results. Metaspace, introduced in Java 8, replaces the older Permanent Generation and is used for class metadata and method information, dynamically adjusting in size based on the application's needs. These distinct memory regions work together to ensure efficient execution and management of Java applications, providing both developers and the JVM with a structured approach to handling memory.
 
------------------------------------------------------------------------------------------------------------------------------
-What is JIT?
+----------------------------------------------------------------------------------------------------------------------------
+5.What is JIT?
      The Just-In-Time (JIT) compiler is a critical component of the Java Virtual Machine (JVM) 
 designed to improve the performance of Java applications by dynamically converting Java bytecode 
 into native machine code at runtime.
 
-What about classLoader?
+-----------------------------------------------------------------------------------------------------------------------------
+6.What about classLoader?
       A class loader in Java is a part of the Java Runtime Environment (JRE) responsible for 
 dynamically loading classes into the Java Virtual Machine (JVM) at runtime.
 Class loaders ensure that classes are loaded into memory only when needed, enabling features like 
 dynamic loading, unloading, and secure execution of Java programs.
 
-when is object create and allocate ?
+-----------------------------------------------------------------------------------------------------------------------------
+7.when is object create and allocate ?
    Objects are created and allocated at runtime, not compile time.
-When you declare a reference variable, such as Person person;
+8.When you declare a reference variable, such as Person person;
 no memory is allocated for the object itself, only for the reference.
 Memory for the object is allocated when you use the new keyword to create an instance of a class.
 --------------------------------------------------------------------------------------------------------------------------
-What is the difference between the string, string buffer , String Builder?
+
+9.) What is Collections?
+	In Java, a collection is an object that groups multiple elements into a single unit. 
+	Collections are used to store, retrieve, manipulate, and communicate aggregate data. 
+	They provide a convenient way to work with groups of related objects.
+	The Java Collections Framework provides a set of interfaces and classes to handle different types of collections. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+10.) What is the advantages of collections :
+	To overcome the drawbacks of arrays.
+	Increase performance by providing dynamic memory, linked list, treeset...
+	Type Safety with Generics, avoid runtime errors using class cast exception
+	Increased Code Reusability
+	Iterator, for each loop
+
+-----------------------------------------------------------------------------------------------------------------------------
+11.) What is ArrayList?
+	An ArrayList in Java is a resizable array implementation of the List interface. 
+	It is part of the Java Collections Framework and provides a way to store and manipulate a dynamic array of elements. 
+	Unlike standard arrays, ArrayList can grow and shrink in size automatically as elements are added or removed. 
+	Key features : Dynamic size, Indexed access, Orderd collection, Allow duplicate
+
+---------------------------------------------------------------------------------------------------------------------------
+12.) What is Iterator?
+	An Iterator in Java is an object that enables you to traverse a collection, typically one element at a time.
+	It is a part of the Java Collections Framework and provides a standardized way to access elements in a collection sequentially without exposing the underlying structure.
+	Common methods : hasNext(), next(), remove().
+	Key features : Forward direction, Universal.
+
+----------------------------------------------------------------------------------------------------------------------------
+13.) Difference between Collection and Collections.
+Collection :
+	A root interface in the Java Collections Framework.
+	Represents a group of objects.
+	Provides methods to operate on elements within the collection.
+Collections :
+	A utility class with static methods.
+	Provides algorithms to operate on collections.
+	Contains methods for sorting, searching, and modifying collections.
+
+---------------------------------------------------------------------------------------------------------------------------
+14. What is Loosely coupling and Tightly coupling ?
+   i) Loosely coupling - Loosely coupled systems have components that are minimally dependent on each other. Changes in one component have little or no impact on others. 
+
+interface MessageService {
+    void sendMessage(String message, String receiver);
+}
+class EmailService implements MessageService {
+    public void sendMessage(String message, String receiver) {
+        System.out.println("Email sent to " + receiver + " with Message=" + message);
+    }
+}
+
+  ii) Tightly Coupling - Tightly coupled systems have components that are highly dependent on one another. A change in one module will likely result in changes in the other.
+
+   class EmailService {
+    public void sendEmail(String message, String receiver) {
+        System.out.println("Email sent to " + receiver + " with Message=" + message);
+    }
+}
+	
+class MyApplication {
+    private EmailService emailService = new EmailService();
+
+    public void processMessages(String message, String receiver) {
+        emailService.sendEmail(message, receiver);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+15.Abstract class 
+         Abstract class in Java is a class that cannot be instantiated directly and is meant to be subclassed. It can contain abstract methods (methods without an implementation) as well as concrete methods (methods with an implementation). The purpose of an abstract class is to provide a base class that other classes can extend.
+
+         cannot create an instance of an abstract class using the new keyword. Abstract classes are meant to be subclassed.
+
+         abstract class can have abstract methods, which are methods declared without an implementation. 
+
+         Abstract classes allow to provide a partial implementation. They can define common behavior that multiple subclasses share, while leaving some methods to be implemented by the subclasses.
+
+-----------------------------------------------------------------------------------------------------------------------------16.What is the difference between the string, string buffer , String Builder?
 String :
 string is basically an object that represents sequence of char values.  Strings are immutable. Once a String object is created, it cannot be changed. Any modification to a String results in the creation of a new String object.
 Since String is immutable, it is inherently thread-safe. Multiple threads can safely access a single String instance concurrently.
@@ -63,5 +144,9 @@ A mutable sequence of characters. This class provides an API compatible with Str
 
 StringBuffer :
 A thread-safe, mutable sequence of characters.A string buffer is like a String, but can be modified.StringBuilder is faster than StringBuffer due to the lack of synchronization, making it the preferred choice for single-threaded scenarios or when thread safety is managed externally.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
 
 

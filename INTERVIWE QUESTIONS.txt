@@ -161,7 +161,18 @@ A thread-safe, mutable sequence of characters.A string buffer is like a String, 
                                   These are serious problems that applications should not try to handle.
                                     Example: OutOfMemoryError. 
 -----------------------------------------------------------------------------------------------------------------------------
+18.) Difference between ArrayList and Linked List.
 
+Key			  |	ArrayList							  |	LinkedList
+_________________________________________________________________________________________________________________________________________
+Internal Implementation:  |	ArrayList internally uses a dynamic array to store its elements.  |	LinkedList uses Doubly Linked 														List to store its elements.
+_________________________________________________________________________________________________________________________________________
+Manipulation		  |	ArrayList is slow as array manipulation is slower.		  |	LinkedList is faster being node 													based as not much bit shifting 														required.
+_________________________________________________________________________________________________________________________________________
+Implementation		  |	ArrayList implements only List.					  |	LinkedList implements List as 														well as Queue. It can acts as a 													queue as well.
+_________________________________________________________________________________________________________________________________________
+Access			  |	ArrayList is faster in storing and accessing data.		  |	LinkedList is faster in 														manipulation of data.
 
+-----------------------------------------------------------------------------------------------------------------------------
 
 

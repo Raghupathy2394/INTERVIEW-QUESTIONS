@@ -151,5 +151,14 @@ A thread-safe, mutable sequence of characters.A string buffer is like a String, 
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+18.In Java, an exception is an event that disrupts the normal flow of the program. It is an object that the Java runtime system generates when an error occurs. Exceptions can be caught and handled to prevent the program from crashing. They are categorized into:
+
+Checked Exceptions: These must be either caught or declared in the method signature using the throws keyword. Example: IOException.
+Unchecked Exceptions: These do not need to be declared or caught. They are subclasses of RuntimeException. Example: NullPointerException.
+Errors: These are serious problems that applications should not try to handle. Example: OutOfMemoryError. 
+
+
+
 
 
